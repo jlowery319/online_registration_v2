@@ -1,0 +1,352 @@
+body {
+	text-align: center;
+	margin: 0;
+	font-family: 'Merriweather', Georgia, serif;
+	background: #ffff99; /* beige */
+	color: #663300; /* medium brown */
+}
+
+#site-title {
+	background: #1a0d00; /* dark brown */
+	color: #ffffb3;
+	font-size: 1em;
+	margin: 0 0 9% 0;
+	padding: 6% 0;
+}
+
+h2 {
+	font-size: 1.2em;
+	margin-bottom: 3%;
+	color: #1a0d00;
+}
+
+p {
+	font-size: .9em;
+	line-height: 1.4;
+	margin: 0 5%;
+	padding-bottom: 11%;
+	border-bottom: 5px solid #1a0d00;
+}
+
+form {
+	margin: 1% 5%;
+	border-top: 2px solid #1a0d00;
+	padding-top: 8%;
+}
+
+fieldset {
+	border-style: none;
+	text-align: left;
+	border-bottom: 2px solid #1a0d00;
+	margin: 0 0 8% 0;
+	padding: 0 0 5% 0;
+}
+
+legend {
+	font-size: 1.2em;
+	font-weight: bold;
+	margin-bottom: 7%;
+	color: #1a0d00;
+}
+
+
+.contact-form input {
+	display: block;
+	width: 95%; 		/* allow for 5% padding on right */
+	padding-right: 5%;
+	height: 50px;
+	text-align: right;
+	font-style: italic;
+	font-size: .8em;
+	margin-top: 4%;
+}
+
+#state {
+	padding-left: 5%;
+	width: 100%;
+	height: 55px;
+	margin-top: 4%;
+	margin-bottom: 7%;
+}
+
+#zip {
+	width: 50%;
+}
+
+.contact-form input,
+#state,
+textarea,
+#zip {
+	border-radius: 5px;
+	background: #ffffcc;
+	color: #1a0d00;
+	border: 1px solid #663300;
+}
+
+.contact-form input:focus,
+#state:focus,
+#zip:focus,
+input[type="textarea"]:focus {
+	outline: 0;  /* remove default blue border */
+	border: 2px solid #1a0d00;
+}
+
+::-webkit-input-placeholder {	/* color the placeholder text */ 
+	color: #663300;
+}
+::-moz-placeholder {
+	color: #663300;
+}
+:-ms-input-placeholder {
+	color: #663300;
+}
+
+
+/* Newsletter Forms */
+
+
+#newsletter-form legend {
+	padding-top: 2%;
+}
+
+#newsletter-choices p {
+	margin: 0;
+	line-height: 1.7;
+	font-size: 1em;
+}
+
+#newsletter-format p {
+	margin-top: 8%;
+	margin-left: 0;
+	margin-bottom: 2%;
+	font-size: 1em;
+}
+
+div > p {
+	border-bottom: none;
+	padding-bottom: 2%;
+}
+
+
+input[type="checkbox"],
+input[type="radio"] {	/* hide the default checkbox */
+	display: none;
+}
+
+
+input[type="checkbox"] + label:before,
+input[type="radio"] + label:before { /*make a square before the label, in place of the default checkbox */
+	content: "";
+	display: inline-block;
+	width: 1em;
+	height: 1em;
+	line-height: 1;
+	background-color: #cc8800;
+	margin-right: 4%;
+	margin-top: 1%;
+	margin-bottom: 0;
+	padding-bottom: 0;
+}
+
+input[type="radio"] + label:before {
+	border-radius: 50%;
+}
+
+input[type="radio"]:checked + label:before,
+input[type="checkbox"]:checked + label:before {
+	text-align: center;
+	line-height: 1;
+	border: 3px solid #663300;
+}
+
+input[type="radio"]:checked + label:before { /* add bullet point */
+	content: '\2022';
+}
+
+input[type="checkbox"] + label:before {
+	border-radius: 5px;
+}
+
+input[type="checkbox"]:checked + label:before { /* add check */
+	content: '\2713';
+}
+
+input[type="radio"] + label,
+input[type="checkbox"] + label {  /* make vertical room between items */
+	line-height: 2.1em;
+}
+
+
+#other-topics-label {
+	display: inline-block;
+	margin-top: 8%;
+	margin-bottom: 6%;
+}
+
+textarea {
+	width: 98%;
+	height: 110px;
+	margin-bottom: 10%;
+	color: #1a0d00;
+}
+
+#signup-button {
+	width: 100%;
+	height: 75px;
+	margin-bottom: 10%;
+	background: #1a0d00;
+	color: #ffffb3;
+	border-radius: 10px;
+	font-size: 1.2em;
+}
+
+#signup-button:focus {
+	outline: 0;
+	background: #663300;
+}
+
+#newsletter-form {
+	border-bottom: none;
+	padding-bottom: 0;
+	margin-bottom: 0;
+}
+
+#copyright {
+	font-style: italic;
+	font-size: .9em;
+	margin-bottom: 60%;
+}
+
+
+/* ------- Media Queries ------- */
+
+@media (min-width: 760px) {   /* desktops */
+
+	#site-title {
+		font-size: 1.3em;
+		margin: 0 0 5% 0;
+		padding: 2% 0;
+	}
+
+	h2 {
+		margin-top: 0;
+		margin-bottom: .5%;
+		font-size: 1.6em;
+	}
+
+	p {
+		font-size: 1em;
+		padding-bottom: 4%;
+		margin: 0 15%;
+	}
+
+	form {
+		margin-left: 15%;
+		margin-right: 15%;
+		padding-top: 5%;
+		font-size: 1em;
+		margin-top: .3%;
+	}
+
+	legend {
+		font-size: 1.3em;
+		margin-bottom: 4%;
+	}
+
+	.contact-form label {
+		font-weight: bold;
+		float: left;
+		width: 30%;
+		height: 50px;
+		margin-top: 20px;
+		margin-bottom: 3px;
+		clear: left;
+	}
+
+	.contact-form input {
+		width: 60%;
+		float: right;
+		margin-top: 0;
+		margin-bottom: 20px;
+		height: 50px;
+	}
+
+	#state {
+		width: 65.25%;
+		float: right;
+		margin-top: 0;
+		margin-bottom: 18px;
+		height: 55px;
+	}
+
+	label[for="state"] {
+		margin-bottom: 5px;
+	}
+
+	#zip {
+		width: 20%;
+		margin-right: 40%;
+	}
+
+	.contact-form input,
+	#state,
+	#zip,
+	#other-topics {
+		border-radius: 5px;
+	}
+
+	#contact-info-form {
+		margin-bottom: 5%;
+	}
+
+	#newsletter-form p {
+		font-size: 1em;
+		padding-bottom: 1%;
+	}
+
+	input[type="checkbox"] + label:before,
+	input[type="radio"] + label:before {
+		margin-right: 2%;
+	}
+
+	#newsletter-format p {
+		margin-top: 4%;
+		margin-bottom: .5%;
+	}
+
+	#other-topics-label {
+		margin-top: 3%;
+		margin-bottom: 3%;
+	}
+
+	#other-topics {
+		margin-bottom: 4%;
+		width: 99%;
+		height: 120px;
+	}
+
+	#signup-button {
+		font-size: 1.3em;
+		height: 75px;
+		margin-bottom: 6%;
+	}
+
+	#copyright {
+		font-size: 1em;
+		margin-bottom: 28%;
+	}
+}
+
+
+
+
+@media (min-width:760px) and (max-width: 900px) { 
+	
+	.contact-form label {   /* prevent text wrapping */ 
+		font-size: .9em;
+	}
+
+}
+
+
+
